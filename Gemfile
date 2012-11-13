@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 gem 'bootstrap-sass', '2.0.4'
+gem 'bcrypt-ruby', '3.0.1'
 #gem 'pg', '0.12.2'
 
 group :development, :test do
@@ -27,6 +28,9 @@ gem 'jquery-rails', '2.0.2'
 gem 'execjs', '1.4.0'
 gem 'therubyracer'
 
+group :development do
+	gem 'annotate', '2.5.0'
+end
 group :test do
   gem 'capybara', '1.1.2'
   gem 'rb-inotify', '0.8.8'
