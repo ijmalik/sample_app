@@ -38,6 +38,7 @@ describe User do
   		end
   	end
   end
+
   describe "when email format is valid" do
   	it "should be valid" do
   		addresses = %w[user@foo.COM A_US-ER@f.b.org first.last@foo.jp a+b@baz.cn]
@@ -86,5 +87,12 @@ describe User do
       specify { user_for_invalid_password.should be_false }
     end
   end
+  describe "email address with mixed case" do
+  	let(:mixed_case_email) { "IJMalik@Gmail.com" }
+  	it "should be as all lower-case" do
+  		@user.email = mixed_case_email
+  		@user.save
+  		@user.reload.email.should == mixed_case_email.downcase
+  	end
+  end
 end
-
