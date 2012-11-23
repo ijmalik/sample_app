@@ -11,6 +11,7 @@ group :development, :test do
   gem 'guard-rspec', '1.2.1'
   gem 'guard-spork', '1.2.0'
   gem 'spork', '0.9.2'
+  gem 'will_paginate', '3.0.3'
 end
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
