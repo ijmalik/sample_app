@@ -20,4 +20,12 @@ class SessionsController < ApplicationController
 		redirect_to root_url
 	end
 end
+	private
+    def signed_in_user
+      unless signed_in?
+        store_location
+        redirect_to signin_url, notice: "please sign in"
+      end
+    end
+	
 #AOA:Bhai Imran,hopefully laptop will be genuin,we can trust him.Battry time around 90 minutes.warranty 7days
